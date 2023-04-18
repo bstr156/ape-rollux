@@ -8,6 +8,7 @@ Ecosystem Plugin for Rollux support in Ape.
 
 ## Installation
 
+<!---
 ### via `ape`
 
 You can install this plugin using `ape`:
@@ -31,20 +32,21 @@ You can install the latest release via [`pip`](https://pypi.org/project/pip/):
 ```bash
 pip install ape-rollux
 ```
+-->
 
 ### via `setuptools`
 
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/ape-rollux.git
+git clone https://github.com/bstr156/ape-rollux.git
 cd ape-rollux
 python3 setup.py install
 ```
 
 ## Quick Usage
 
-Installing this plugin adds support for the Rollux ecosystem:
+Installing this plugin adds support for the Rollux ecosystem, and will work with your project's ape-config.yaml:
 
 ```bash
 ape console --network rollux:tanenbaum
