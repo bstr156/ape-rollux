@@ -4,14 +4,14 @@ To get started with working on the codebase, use the following steps prepare you
 
 ```bash
 # clone the github repo and navigate into the folder
-git clone https://github.com/ApeWorX/ape-optimism.git
-cd ape-optimism
+git clone https://github.com/ApeWorX/ape-rollux.git
+cd ape-rollux
 
 # create and load a virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# install ape-optimism into the virtual environment
+# install ape-rollux into the virtual environment
 python setup.py install
 
 # install the developer dependencies (-e is interactive mode)

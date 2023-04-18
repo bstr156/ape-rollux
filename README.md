@@ -1,6 +1,6 @@
 # Quick Start
 
-Ecosystem Plugin for Optimism support in Ape.
+Ecosystem Plugin for Rollux support in Ape.
 
 ## Dependencies
 
@@ -13,7 +13,7 @@ Ecosystem Plugin for Optimism support in Ape.
 You can install this plugin using `ape`:
 
 ```bash
-ape plugins install optimism
+ape plugins install rollux
 ```
 
 or via config file:
@@ -21,7 +21,7 @@ or via config file:
 ```yaml
 # ape-config.yaml
 plugins:
-  - name: optimism
+  - name: rollux
 ```
 
 ### via `pip`
@@ -29,7 +29,7 @@ plugins:
 You can install the latest release via [`pip`](https://pypi.org/project/pip/):
 
 ```bash
-pip install ape-optimism
+pip install ape-rollux
 ```
 
 ### via `setuptools`
@@ -37,17 +37,17 @@ pip install ape-optimism
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/ape-optimism.git
-cd ape-optimism
+git clone https://github.com/ApeWorX/ape-rollux.git
+cd ape-rollux
 python3 setup.py install
 ```
 
 ## Quick Usage
 
-Installing this plugin adds support for the Optimism ecosystem:
+Installing this plugin adds support for the Rollux ecosystem:
 
 ```bash
-ape console --network optimism:goerli
+ape console --network rollux:tanenbaum
 ```
 
 ## Development

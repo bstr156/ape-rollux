@@ -1,8 +1,6 @@
 EXPECTED_OUTPUT = """
-optimism
-├── mainnet
-│   └── geth  (default)
-├── goerli
+rollux
+├── tanenbaum
 │   └── geth  (default)
 └── local  (default)
     └── test  (default)

@@ -12,14 +12,14 @@ from eth_utils import add_0x_prefix
 
 NETWORKS = {
     # chain_id, network_id
-    "mainnet": (10, 10),
-    "goerli": (420, 420),
+    #"mainnet": (5700, 5700),
+    "tanenbaum": (57000, 57000),
 }
 
 
-class ApeOptimismError(ApeException):
+class ApeRolluxError(ApeException):
     """
-    Raised in the ape-optimism plugin.
+    Raised in the ape-rollux plugin.
     """
 
 
@@ -37,7 +37,7 @@ def _create_local_config(default_provider: Optional[str] = None) -> NetworkConfi
     )
 
 
-class OptimismConfig(PluginConfig):
+class RolluxConfig(PluginConfig):
     mainnet: NetworkConfig = _create_network_config()
     mainnet_fork: NetworkConfig = _create_local_config()
     goerli: NetworkConfig = _create_network_config()
@@ -46,10 +46,10 @@ class OptimismConfig(PluginConfig):
     default_network: str = LOCAL_NETWORK_NAME
 
 
-class Optimism(Ethereum):
+class Rollux(Ethereum):
     @property
-    def config(self) -> OptimismConfig:  # type: ignore
-        return cast(OptimismConfig, self.config_manager.get_config("optimism"))
+    def config(self) -> RolluxConfig:  # type: ignore
+        return cast(RolluxConfig, self.config_manager.get_config("rollux"))
 
     def create_transaction(self, **kwargs) -> TransactionAPI:
         """
@@ -114,6 +114,6 @@ def _get_transaction_cls(transaction_type: TransactionType) -> Type[TransactionA
         TransactionType.STATIC: StaticFeeTransaction,
     }
     if transaction_type not in transaction_types:
-        raise ApeOptimismError(f"Transaction type '{transaction_type}' not supported.")
+        raise ApeRolluxError(f"Transaction type '{transaction_type}' not supported.")
 
     return transaction_types[transaction_type]
